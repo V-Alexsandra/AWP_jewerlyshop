@@ -1,0 +1,145 @@
+﻿<Window x:Class="AWP_jewerlyshop.AddProductWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AWP_jewerlyshop"
+        mc:Ignorable="d"
+        Title="АРМ оператора продаж ювелирных изделий" Height="450" Width="800" WindowStartupLocation="CenterScreen" Icon="/Logo.png" Background="#FF1E2946">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="58*"/>
+            <ColumnDefinition Width="48*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="136*"/>
+            <ColumnDefinition Width="46*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="53*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="add" Content="Добавить товар" Margin="10,2,5,5" Background="#FF1E2946" FontSize="18" BorderBrush="#FFFFDD00" Foreground="#FFFFDD00" Grid.Row="9" Grid.Column="8" Grid.ColumnSpan="2" Click="add_Click"/>
+        <Button x:Name="back" Content="Назад" Margin="3,4,7,8" Background="#FF1E2946" FontSize="18" BorderBrush="#FFFFDD00" Foreground="#FFFFDD00" Click="back_Click" Grid.Row="9" Grid.Column="1"/>
+        <Label Content="Вид украшения" Margin="4,3,8,0" FontSize="18" Grid.Row="1" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="producttype" Margin="11,4,11,10" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3">
+            <TextBlock>Кольцо</TextBlock>
+            <TextBlock>Серьги</TextBlock>
+            <TextBlock>Браслет</TextBlock>
+            <TextBlock>Цепи</TextBlock>
+            <TextBlock>Подвески</TextBlock>
+        </ComboBox>
+        <Label Content="Вид металла" Margin="4,5,8,5" FontSize="18" Grid.Row="2" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="metalltype" Margin="11,8,11,10" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3">
+            <TextBlock><Run Text="Розовое золото"/></TextBlock>
+            <TextBlock><Run Text="Белое золото"/></TextBlock>
+            <TextBlock><Run Text="Желтое золото"/></TextBlock>
+            <TextBlock><Run Text="Серебро"/></TextBlock>
+        </ComboBox>
+        <Label Content="Проба" Margin="6,4,13,6" FontSize="18" Grid.Row="2" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="6"/>
+        <ComboBox x:Name="sample" Margin="8,9,8,9" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2">
+            <TextBlock><Run Text="Золото 585"/></TextBlock>
+            <TextBlock><Run Text="Золото 375"/></TextBlock>
+            <TextBlock><Run Text="Золото 750"/></TextBlock>
+            <TextBlock><Run Text="Серебро 925"/></TextBlock>
+        </ComboBox>
+        <Label Content="Вид вставки" Margin="4,4,8,5" FontSize="18" Grid.Row="3" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="gemtype" Margin="11,8,11,10" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3">
+            <TextBlock><Run Text="Без вставки"/></TextBlock>
+            <TextBlock><Run Text="Бриллиант"/></TextBlock>
+            <TextBlock><Run Text="Фианит"/></TextBlock>
+            <TextBlock><Run Text="Сапфир"/></TextBlock>
+            <TextBlock><Run Text="Топаз"/></TextBlock>
+            <TextBlock><Run Text="Жемчуг"/></TextBlock>
+            <TextBlock><Run Text="Изумруд"/></TextBlock>
+            <TextBlock><Run Text="Гранат"/></TextBlock>
+            <TextBlock><Run Text="Рубин"/></TextBlock>
+            <TextBlock><Run Text="Аметист"/></TextBlock>
+            <TextBlock><Run Text="Агат"/></TextBlock>
+            <TextBlock><Run Text="Султанит"/></TextBlock>
+            <TextBlock><Run Text="Микс"/></TextBlock>
+            <TextBlock><Run Text="Розовый кварц"/></TextBlock>
+            <TextBlock><Run Text="Цитрин"/></TextBlock>
+        </ComboBox>
+        <Label Content="Конструкция" Margin="4,3,8,6" FontSize="18" Grid.Row="4" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="design" Margin="11,8,11,11" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3">
+            <TextBlock><Run Text="Плетение Сингапур"/></TextBlock>
+            <TextBlock><Run Text="Плетение Ромб"/></TextBlock>
+            <TextBlock><Run Text="Плетение Ромб Двойной"/></TextBlock>
+            <TextBlock><Run Text="Плетение Панцирь"/></TextBlock>
+            <TextBlock><Run Text="Плетение Якорное"/></TextBlock>
+            <TextBlock><Run Text="Кольцо Печатка"/></TextBlock>
+            <TextBlock><Run Text="Кольцо Обручальное"/></TextBlock>
+            <TextBlock><Run Text="Кольцо Гладкое"/></TextBlock>
+            <TextBlock><Run Text="Кольцо Дорожка"/></TextBlock>
+            <TextBlock><Run Text="Кольцо Перстень"/></TextBlock>
+            <TextBlock><Run Text="Серьги Застежка Пусет (Гвоздик)"/></TextBlock>
+            <TextBlock><Run Text="Серьги Застежка Французский Замок"/></TextBlock>
+            <TextBlock><Run Text="Серьги Застежка Кольцо (Конго)"/></TextBlock>
+            <TextBlock><Run Text="Серьги Застежка Цепочка (Продевка)"/></TextBlock>
+            <TextBlock><Run Text="Серьги Застежка Кафф"/></TextBlock>
+            <TextBlock><Run Text="Кулон"/></TextBlock>
+            <TextBlock><Run Text="Леска"/></TextBlock>
+            <TextBlock><Run Text="Крест"/></TextBlock>
+            <TextBlock><Run Text="Икона"/></TextBlock>
+            <TextBlock><Run Text="Медальон"/></TextBlock>
+            <TextBlock><Run Text="Бегунок"/></TextBlock>
+        </ComboBox>
+        <Label Content="Размер" Margin="6,5,13,6" FontSize="18" Grid.Row="4" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="6"/>
+        <ComboBox x:Name="size" Margin="8,10,8,9" BorderBrush="#FFFFDD00" FontSize="14" Background="#FF1E2946" InputScope="PhraseList" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="2">
+            <TextBlock><Run Text="13"/></TextBlock>
+            <TextBlock><Run Text="14"/></TextBlock>
+            <TextBlock><Run Text="15"/></TextBlock>
+            <TextBlock><Run Text="15.5"/></TextBlock>
+            <TextBlock><Run Text="16"/></TextBlock>
+            <TextBlock><Run Text="16.5"/></TextBlock>
+            <TextBlock><Run Text="17"/></TextBlock>
+            <TextBlock><Run Text="17.5"/></TextBlock>
+            <TextBlock><Run Text="18"/></TextBlock>
+            <TextBlock><Run Text="18.5"/></TextBlock>
+            <TextBlock><Run Text="19"/></TextBlock>
+            <TextBlock><Run Text="19.5"/></TextBlock>
+            <TextBlock><Run Text="20"/></TextBlock>
+            <TextBlock><Run Text="20.5"/></TextBlock>
+            <TextBlock><Run Text="21"/></TextBlock>
+            <TextBlock><Run Text="21.5"/></TextBlock>
+            <TextBlock><Run Text="22"/></TextBlock>
+            <TextBlock><Run Text="22.5"/></TextBlock>
+            <TextBlock><Run Text="23"/></TextBlock>
+            <TextBlock><Run Text="400"/></TextBlock>
+            <TextBlock><Run Text="450"/></TextBlock>
+            <TextBlock><Run Text="500"/></TextBlock>
+            <TextBlock><Run Text="550"/></TextBlock>
+            <TextBlock><Run Text="600"/></TextBlock>
+            <TextBlock><Run Text="650"/></TextBlock>
+            <TextBlock><Run Text="0"/></TextBlock>
+        </ComboBox>
+        <Label Content="Вес украшения" Margin="4,3,8,0" FontSize="18" Grid.Row="5" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="weight" Grid.Column="3" Grid.Row="5" TextWrapping="Wrap" FontSize="18" Margin="13,10,2,9"/>
+        <Label Content="Количество" Margin="5,6,7,5" FontSize="18" Grid.Row="6" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="count" Grid.Column="3" Grid.Row="6" TextWrapping="Wrap" FontSize="18" Margin="13,12,3,9"/>
+        <Label Content="Стоимость" Margin="5,5,7,5" FontSize="18" Grid.Row="7" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="price" Grid.Column="3" Grid.Row="7" TextWrapping="Wrap" FontSize="18" Margin="13,10,2,10"/>
+        <RadioButton x:Name="for_women" Grid.Column="6" Content="Для женщин" Grid.ColumnSpan="2" Margin="8,7,13,10" Grid.Row="6" FontSize="18" BorderBrush="#FF1E2946" Foreground="#FFFBDD0C" Checked="for_women_Checked"/>
+        <RadioButton x:Name="for_man" Grid.Column="6" Content="Для мужчин" Grid.ColumnSpan="2" Margin="8,6,13,10" Grid.Row="7" FontSize="18" BorderBrush="#FF1E2946" Foreground="#FFFBDD0C" Checked="for_man_Checked"/>
+        <RadioButton x:Name="for_kids" Grid.Column="7" Content="Для детей" Grid.ColumnSpan="2" Margin="5,7,13,10" Grid.Row="6" FontSize="18" BorderBrush="#FF1E2946" Foreground="#FFFBDD0C" Checked="for_kids_Checked"/>
+        <RadioButton x:Name="ynisex" Grid.Column="7" Content="Унисекс" Grid.ColumnSpan="2" Margin="4,6,14,10" Grid.Row="7" FontSize="18" BorderBrush="#FF1E2946" Foreground="#FFFBDD0C" Checked="ynisex_Checked"/>
+        <Label Content="грамм" Margin="3,10,4,2" Grid.Row="5" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="4"/>
+        <Label Content="штук" Margin="3,12,4,4" Grid.Row="6" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="4"/>
+        <Label Content="рублей" Margin="3,10,4,5" Grid.Row="7" Background="#FF1E2946" Foreground="#FFFFDD00" Grid.Column="4"/>
+
+    </Grid>
+</Window>
